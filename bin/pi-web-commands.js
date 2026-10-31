@@ -47,18 +47,18 @@ async function stopServer(record, {
     else kill(pid, "SIGTERM");
   } catch (killError) {
     if (killError.code !== "ESRCH") {
-      error(`Could not stop pi314-web (pid ${pid}): ${killError.message}`);
+      error(`Could not stop pi-circa (pid ${pid}): ${killError.message}`);
       return 1;
     }
   }
   for (let waited = 0; isAlive(pid); waited += STOP_POLL_MS) {
     if (waited >= timeoutMs) {
-      error(`pi314-web on ${record.url} (pid ${pid}) is still running after ${timeoutMs / 1000} s.`);
+      error(`pi-circa on ${record.url} (pid ${pid}) is still running after ${timeoutMs / 1000} s.`);
       return 1;
     }
     await wait(STOP_POLL_MS);
   }
-  log(`Stopped pi314-web on ${record.url} (pid ${pid}).`);
+  log(`Stopped pi-circa on ${record.url} (pid ${pid}).`);
   return 0;
 }
 
@@ -79,8 +79,8 @@ async function runCommand(options, {
     case "status": {
       const running = await list();
       log(running.length === 0
-        ? "No pi314-web server is running."
-        : `Running pi314-web servers:\n${running.map(records.formatRunRecord).join("\n")}`);
+        ? "No pi-circa server is running."
+        : `Running pi-circa servers:\n${running.map(records.formatRunRecord).join("\n")}`);
       return 0;
     }
     case "stop":

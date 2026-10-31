@@ -568,7 +568,7 @@ export const enLocale: LocalePlugin = {
     "sidebar.worktreePath": "Worktree: {path}",
     "sidebar.removeWorktreeTitle": "Remove worktree checkout {path}; the branch is kept",
     "sidebar.removeWorktreeHeading": "Remove {name}",
-    "sidebar.brandLabel": "pi314-web, versions: web {app}, pi {pi}",
+    "sidebar.brandLabel": "pi-circa, versions: web {app}, pi {pi}",
     "sidebar.tabsLabel": "Sidebar view",
     "sidebar.tabSessions": "Sessions",
     "sidebar.tabFiles": "Files",

@@ -158,13 +158,13 @@ function selectRunRecord(records, port) {
   const matching = port === undefined ? records : records.filter((record) => String(record.port) === String(port));
   if (matching.length === 1) return { record: matching[0] };
   if (matching.length === 0) {
-    return { error: port === undefined ? "No pi314-web server is running." : `No pi314-web server is running on port ${port}.` };
+    return { error: port === undefined ? "No pi-circa server is running." : `No pi-circa server is running on port ${port}.` };
   }
   if (port !== undefined) {
-    return { error: `Several pi314-web servers are running on port ${port}:\n${matching.map(formatRunRecord).join("\n")}` };
+    return { error: `Several pi-circa servers are running on port ${port}:\n${matching.map(formatRunRecord).join("\n")}` };
   }
   return {
-    error: `Several pi314-web servers are running:\n${matching.map(formatRunRecord).join("\n")}\nPass --port <port> to choose one.`,
+    error: `Several pi-circa servers are running:\n${matching.map(formatRunRecord).join("\n")}\nPass --port <port> to choose one.`,
   };
 }
 
@@ -187,7 +187,7 @@ function createRunRecordTracker({ dir, record, parentProcess = process, warn = c
         runDir = typeof dir === "function" ? dir() : dir;
         writeRunRecord(runDir, record);
       } catch (error) {
-        warn(`[pi314-web] could not write the run record (pi314-web status/stop/open will not see this server): ${error.message}`);
+        warn(`[pi-circa] could not write the run record (pi-circa status/stop/open will not see this server): ${error.message}`);
         return;
       }
       parentProcess.once("exit", () => removeRunRecord(runDir, record.pid));

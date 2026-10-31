@@ -1450,7 +1450,7 @@ export function AppShell() {
   // Subagent work tabs: like files, only the active one is mounted.
   const activeAgentTab = agentTabs.find((tab) => `agent:${tab.sessionId}` === activeFileTabId) ?? null;
   const activeCwdName = activeCwd ? getFileName(activeCwd) || activeCwd : null;
-  const windowTitle = activeCwdName ? `${activeCwdName} - pi314-web` : "pi314-web";
+  const windowTitle = activeCwdName ? `${activeCwdName} - pi-circa` : "pi-circa";
 
   useEffect(() => {
     const syncWindowTitle = () => {

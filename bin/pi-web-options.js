@@ -40,13 +40,13 @@ const COMMAND_OPTIONS = {
 };
 
 function getHelpText() {
-  return `Usage: pi314-web [command] [options]
+  return `Usage: pi-circa [command] [options]
 
-Start the pi314-web UI server, or run one of the commands below.
+Start the pi-circa UI server, or run one of the commands below.
 
 Commands:
-  version                    Print the installed pi314-web version (also -v, --version)
-  status                     List running pi314-web servers
+  version                    Print the installed pi-circa version (also -v, --version)
+  status                     List running pi-circa servers
   stop [--port <port>]       Stop a running server
   open [--port <port>]       Open a running server in the browser
   update [--check]           Update a global npm install to the latest version

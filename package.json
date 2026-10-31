@@ -1,5 +1,5 @@
 {
-  "name": "pi314-web",
+  "name": "pi-circa",
   "version": "0.13.0",
   "description": "Web UI for the pi coding agent",
   "homepage": "https://github.com/agegr/pi-web#readme",
@@ -22,7 +22,7 @@
     "ios_saf 16.2"
   ],
   "bin": {
-    "pi314-web": "bin/pi-web.js"
+    "pi-circa": "bin/pi-web.js"
   },
   "files": [
     "bin",
