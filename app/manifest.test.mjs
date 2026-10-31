@@ -8,14 +8,14 @@ test("manifest reads the app name at runtime without changing other metadata", (
     assert.equal(dynamic, "force-dynamic");
     delete process.env.PI_WEB_APP_NAME;
     const defaults = manifest();
-    assert.equal(defaults.name, "3-14-web");
-    assert.equal(defaults.short_name, "3-14-web");
+    assert.equal(defaults.name, "pi314-web");
+    assert.equal(defaults.short_name, "pi314-web");
 
     // Reuse the same imported function: the environment must not be captured
     // at module load time (or baked into a statically generated manifest).
     for (const [value, expected] of [
-      ["", "3-14-web"],
-      [" \t\n ", "3-14-web"],
+      ["", "pi314-web"],
+      [" \t\n ", "pi314-web"],
       ["Work Pi", "Work Pi"],
       ["  工作 Pi 🚀 \n", "工作 Pi 🚀"],
       ["Another Pi", "Another Pi"],
