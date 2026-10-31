@@ -40,13 +40,13 @@ const COMMAND_OPTIONS = {
 };
 
 function getHelpText() {
-  return `Usage: pi-web [command] [options]
+  return `Usage: 3-14-web [command] [options]
 
-Start the Pi Web UI server, or run one of the commands below.
+Start the 3-14-web UI server, or run one of the commands below.
 
 Commands:
-  version                    Print the installed Pi Web version (also -v, --version)
-  status                     List running Pi Web servers
+  version                    Print the installed 3-14-web version (also -v, --version)
+  status                     List running 3-14-web servers
   stop [--port <port>]       Stop a running server
   open [--port <port>]       Open a running server in the browser
   update [--check]           Update a global npm install to the latest version

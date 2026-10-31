@@ -1,5 +1,5 @@
 {
-  "name": "@agegr/pi-web",
+  "name": "3-14-web",
   "version": "0.13.0",
   "description": "Web UI for the pi coding agent",
   "homepage": "https://github.com/agegr/pi-web#readme",
@@ -22,7 +22,7 @@
     "ios_saf 16.2"
   ],
   "bin": {
-    "pi-web": "bin/pi-web.js"
+    "3-14-web": "bin/pi-web.js"
   },
   "files": [
     "bin",
